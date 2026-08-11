@@ -1,0 +1,75 @@
+<div class="hidden-lg  hidden-md  col-sm-12 col-xs-12"><div style="margin-bottom:3px;text-align: center;font-size:300%;">'''[[卫星百科]]'''</div>
+<div style="margin-bottom:10px;text-align: center;font-size:120%;">很认真的中文航天百科</div>
+</div>
+{{HomeBanner}}
+<div class="pc-grid-layout d-none d-md-block">
+<div class="row g-1">
+<div class="col-lg-6 col-md-12 hidden-sm hidden-xs">
+<div class="h-100">
+<span class="h2">国家地区入口</span> | [[引导页:国家地区名单|更多]]
+
+<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3px;">
+{{NavCard|image=[[文件:卫星百科-China-flag.png|50px|link=引导页:中国]]|text=中国}}
+{{NavCard|image=[[文件:卫星百科-United-states-flag.png|50px|link=引导页:美国]]|text=美国}}
+{{NavCard|image=[[文件:卫星百科-European-union-flag.png|50px|link=引导页:欧洲]]|text=欧洲}}
+{{NavCard|image=[[文件:卫星百科-Russia-flag.png|50px|link=引导页:俄罗斯]]|text=俄罗斯}}
+{{NavCard|image=[[文件:卫星百科-Japan-flag.png|50px|link=引导页:日本]]|text=日本}}
+{{NavCard|image=[[文件:卫星百科-India-flag.png|50px|link=引导页:印度]]|text=印度}}
+{{NavCard|image=[[文件:卫星百科-Ussr-flag.png|50px|link=引导页:苏联]]|text=苏联}}
+{{NavCard|image=[[文件:卫星百科-Israel-flag.png|50px|link=引导页:以色列]]|text=以色列}}
+{{NavCard|image=[[File:Iran-flag.png|50px|link=引导页:伊朗]]|text=伊朗}}
+{{NavCard|image=[[File:North-korea-flag.png|50px|link=引导页:朝鲜]]|text=朝鲜}}
+{{NavCard|image=[[File:Korea-flag.png|50px|link=引导页:韩国]]|text=韩国}}
+{{NavCard|image=[[文件:卫星百科-Germany-flag.png|50px|link=引导页:德国]]|text=德国}}
+</div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 hidden-sm hidden-xs">
+<div class="h-100">
+<span class="h2">分类入口</span> | [[模板:首页导航|更多]]
+
+<div style="display:grid;grid-template-columns:repeat(6,1fr);gap:3px;">
+{{NavCard|image=[[文件:卫星百科-rocket-record.svg|50px|link=引导页:发射记录]]|text=发射记录}}
+{{NavCard|image=[[文件:卫星百科-rocket-launch.svg|50px|link=火箭回收]]|page=[[火箭回收]]|text=火箭回收}}
+{{NavCard|image=[[文件:卫星百科-rocket.svg|50px|link=引导页:运载火箭]]|text=运载火箭}}
+{{NavCard|image=[[文件:卫星百科-international-space-station.svg|50px|link=引导页:空间站]]|text=空间站}}
+{{NavCard|image=[[文件:卫星百科-space-shuttle.svg|50px|link=引导页:载人飞船]]|text=载人飞船}}
+{{NavCard|image=[[文件:卫星百科-space-rover-2.svg|50px|link=引导页:深空探测器]]|page=[[引导页:深空探测器|探测器]]|text=深空探测器}}
+{{NavCard|image=[[文件:卫星百科-launch-site.svg|50px|link=引导页:发射场]]|text=发射场}}
+{{NavCard|image=[[文件:卫星百科-mission-control.svg|50px|link=引导页:机构]]|text=机构}}
+{{NavCard|image=[[文件:卫星百科-space-satellite-dish.svg|50px|link=引导页:支持设施]]|text=支持设施}}
+{{NavCard|image=[[文件:卫星百科-astronaut-helmet.svg|50px|link=引导页:航天人]]|text=航天人}}
+{{NavCard|image=[[File:Space-rocket.svg|50px|link=:分类:火箭发动机]]|page=[[:分类:火箭发动机|发动机]]|text=发动机}}
+{{NavCard|image=[[文件:卫星百科-atom.svg|50px|link=:分类:航天知识资料]]|page=[[:分类:航天知识资料|知识资料]]|text=知识资料}}
+</div>
+</div>
+</div>
+</div>
+</div>
+<br>
+{{HomeRowTripleCard
+|card1={{TimeCard|bg=#FEF3C7|fg=#D97706|title=很久以前|content=<div style="max-width:100%;box-sizing:border-box;word-break:break-all;overflow-wrap:anywhere;overflow-x:hidden;">{{#invoke:TriviaTip2|randomTip}}</div>}}
+|card2={{TimeCard|bg=#EDE9FE|fg=#6D28D9|title=你知道吗|content=<div style="max-width:100%;box-sizing:border-box;word-break:anywhere;">{{#invoke:TriviaTip|randomTip}}</div>}}
+|card3={{TimeCard|bg=#DBEAFE|fg=#1D4ED8|title=不久之前|content={{#invoke:刚刚/test|getRecentLaunches|2026|6}}}}
+}}{{HomeRowTripleCard
+|card1={{TimeCard|bg=#FEF3C7|fg=#D97706|title=最近吐槽|content=<commentsoftheday limit="1" nocache=true></commentsoftheday>}}
+|card2={{TimeCard|bg=#DBEAFE|fg=#1D4ED8|title=最近更改|content=<siteactivity limit="5" style="log"></siteactivity>}}
+|card3={{TimeCard|bg=#EDE9FE|fg=#6D28D9|title=最近文章|content=<bloglist limit="5"></bloglist><small><center>[[:分类:博客|更多]]</center></small>}}}}{{HomeRowDoubleCard|left={{StatusCard|title=建设情况|content=
+<table style="width:100%;border-collapse:collapse;margin:0;padding:0;">
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[特殊:所有页面|页面总数]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{NUMBEROFPAGES}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[特殊:长页面|文章数]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{NUMBEROFARTICLES}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[特殊:文件列表|文件数]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{NUMBEROFFILES}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[特殊:最近更改|总编辑次数]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{NUMBEROFEDITS}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[特殊:用户列表|总用户数]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{NUMBEROFUSERS}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:模范词条|模范词条]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:模范词条}}</td></tr>
+</table>
+}}|right={{StatusCard|title=维护情况|content=
+<table style="width:100%;border-collapse:collapse;margin:0;padding:0;">
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:正在施工|正在施工]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:正在施工}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:需要校对|需要校对]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:需要校对}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:需要完善|需要完善]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:需要完善}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:需要更新|需要更新]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:需要更新}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:缺少图片|缺少图片]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:缺少图片}}</td></tr>
+<tr style="line-height:2.2;"><td style="color:#0066cc;font-size:1.1em;white-space:nowrap;padding:0;text-align:left;">[[:分类:含有受损文件链接的页面|受损图片]]</td><td style="text-align:right;font-size:1.1em;padding:0;">{{PAGESINCATEGORY:含有受损文件链接的页面}}</td></tr>
+</table>
+}}}}
