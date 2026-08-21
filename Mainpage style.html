@@ -1,0 +1,251 @@
+<style>
+.sth-root{
+  --canvas:#f0f4f8;
+  --card-bg:#ffffff;
+  --card-border:#e2e8f0;
+  --card-border-hover:#cbd5e1;
+  --card-shadow:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+  --card-shadow-hover:0 4px 12px rgba(0,0,0,.08);
+  --hair:rgba(0,113,188,.10);
+  --hair2:rgba(0,113,188,.20);
+  --tx:#1a2332;
+  --tx2:#3a4a5c;
+  --tx3:#6b7d8f;
+  --line2:rgba(0,113,188,.08);
+  --accent:#0071BC;
+  --accent2:#0088e0;
+  --accent-light:rgba(0,113,188,.10);
+  --radius-card:16px;
+  --radius-pill:12px;
+  --space-card:20px;
+  --space-row:20px;
+  --disp:"D-DIN","Arial Narrow","Helvetica Neue",Arial,"Microsoft YaHei",sans-serif;
+  --body:"Helvetica Neue",Helvetica,Arial,"Microsoft YaHei","PingFang SC",sans-serif;
+  background:
+    radial-gradient(900px 500px at 15% -80px, rgba(0,113,188,.06), transparent 60%),
+    radial-gradient(700px 400px at 85% 5%, rgba(100,60,200,.04), transparent 50%),
+    radial-gradient(500px 300px at 50% 100%, rgba(0,180,120,.03), transparent 50%),
+    var(--canvas);
+  color:var(--tx);
+  font-family:var(--body);
+  line-height:1.6;
+  border-radius:16px;
+  overflow:hidden;
+}
+.sth-root a{color:var(--accent);text-decoration:none;transition:color .2s ease}
+.sth-root a:hover{color:var(--accent2);text-decoration:none}
+.sth-root p{margin:0 0 10px}
+
+.sth-hero{position:relative;text-align:center;padding:15px;
+  border-bottom:1px solid var(--hair)}
+.sth-hero-inner{position:relative;max-width:880px;margin:0 auto}
+.sth-search{position:relative;z-index:6;max-width:640px;margin:0 auto;
+  animation:sth-rise .5s cubic-bezier(.2,.6,.2,1) both}
+@keyframes sth-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+.sth-root div.search{padding:0}
+.sth-root .bar_all{position:relative;overflow:visible;border-radius:999px;
+  background:var(--card-bg);
+  border:1px solid var(--card-border);
+  box-shadow:var(--card-shadow);
+  transition:box-shadow .3s ease,border-color .3s ease}
+.sth-root .bar_all:hover{box-shadow:var(--card-shadow-hover);border-color:var(--card-border-hover)}
+.sth-root .bar_all form{border:none!important;background:none!important;box-shadow:none!important;outline:none!important;position:relative;width:100%;overflow:hidden;border-radius:999px}
+.sth-root .bar_all input{width:100%;height:52px;
+  background:transparent!important;
+  border:none!important;
+  color:var(--tx)!important;font-size:15px;padding-left:24px!important;
+  box-sizing:border-box}
+.sth-root .bar_all input::placeholder{color:var(--tx3)}
+.sth-root .bar_all input:hover,
+.sth-root .bar_all input:focus{box-shadow:none!important}
+.sth-root .bar_all button{height:40px;width:auto;padding:0 24px;overflow:hidden;
+  background:var(--accent)!important;
+  border:none!important;
+  border-radius:999px!important;
+  color:#fff!important;
+  font-weight:600!important;
+  cursor:pointer;position:absolute;top:6px;right:6px;
+  transition:background .2s ease,transform .2s ease}
+.sth-root .bar_all button:before{content:"搜索全站"!important;color:#fff!important;
+  font-size:13px!important;letter-spacing:.12em}
+.sth-root .bar_all button:hover{background:var(--accent2)!important}
+.sth-root .bar_all button:active{transform:none}
+.sth-root .search-panel{background:rgba(255,255,255,1)!important}
+.search-button-ripple{position:absolute;border:1px solid rgba(255,255,255,.7);border-radius:50%;background:rgba(255,255,255,.32);pointer-events:none;
+  transform:translate(-50%,-50%) scale(.08);animation:sth-search-ripple .65s ease-out forwards}
+@keyframes sth-search-ripple{0%{opacity:.8;transform:translate(-50%,-50%) scale(.08)}100%{opacity:0;transform:translate(-50%,-50%) scale(2.6)}}
+
+.sth-statbar{margin:10px auto 0;display:flex;flex-wrap:wrap;justify-content:center;
+  align-items:center;gap:4px 14px;max-width:1200px;
+  font-size:13px;letter-spacing:.05em;color:var(--tx3);
+  animation:sth-rise .7s .4s cubic-bezier(.2,.6,.2,1) both}
+.sth-statbar a{color:var(--tx3)}
+.sth-statbar a:hover{color:var(--accent)}
+.sth-statbar>div:first-child a{color:var(--accent)}
+
+.sth-body{max-width:1200px;margin:0 auto;padding:10px 22px 24px}
+.sth-sec-head{display:flex;align-items:center;gap:16px;
+  padding-top:10px;padding-bottom:12px;border-bottom:1px solid var(--hair)}
+.sth-sec-title{font-family:var(--disp);font-size:20px;font-weight:700;
+  letter-spacing:.14em;color:var(--tx);display:flex;align-items:center;gap:10px}
+.sth-sec-title::before{content:'';display:inline-block;width:3px;height:1.1em;
+  background:var(--accent);border-radius:2px;flex-shrink:0}
+.sth-sec-line{display:none}
+.sth-sec-more{margin-left:auto;font-size:13px;white-space:nowrap}
+.sth-sec-more a{color:var(--tx3);text-decoration:none}
+.sth-sec-more a:hover{color:var(--accent)}
+
+/* ============ 6. 导航卡（去 Liquid Glass — 简洁实心）============ */
+.sth-nav-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(8px,1.5vw,24px)}
+.sth-nav-columns>div{min-width:0}
+.sth-navgrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(1px,.35vw,6px)}
+.sth-nav-card{overflow:visible;border-radius:12px;padding:clamp(0px,.15vw,3px);min-width:0}
+.sth-nav-card .wiki-card-btn{border-radius:12px!important;padding:0!important;
+  min-height:95px!important;height:95px!important;text-align:center;display:flex;
+  width:100%;min-width:0;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;
+  -webkit-tap-highlight-color:transparent}
+.sth-nav-card-media{font-size:1.6em;margin-bottom:6px;
+  line-height:1;max-width:100%;min-width:0;overflow:hidden;display:flex;align-items:center;
+  justify-content:center}
+.sth-nav-card-label{width:100%;
+  min-width:0;color:var(--tx);font-size:clamp(13px,1.1vw,.95em);font-weight:700;
+  line-height:1.2;word-break:break-word;overflow-wrap:anywhere;text-wrap:balance}
+.sth-nav-columns>div .sth-sec-head{border-bottom:0}
+.sth-root .wiki-card-btn{
+  position:relative;overflow:hidden;
+  background:var(--card-bg)!important;
+  border:1px solid var(--card-border)!important;
+  box-shadow:var(--card-shadow)!important;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important}
+.sth-root .wiki-card-btn::before{display:none!important}
+.sth-navgrid .wiki-card-btn a{color:var(--tx)}
+.sth-navgrid .wiki-card-btn a:hover{color:var(--accent2)}
+
+/* ============ 7. 信息卡片（去 Liquid Glass — 简洁实心）============ */
+.sth-root .wiki-card-box{
+  position:relative;overflow:hidden;
+  background:var(--card-bg)!important;
+  border:1px solid var(--card-border)!important;
+  box-shadow:var(--card-shadow)!important;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease!important}
+.sth-root .wiki-card-box::before{display:none!important}
+.sth-root .wiki-card-btn:hover,
+.sth-root .wiki-card-box:hover{
+  transform:translateY(-2px)!important;
+  border-color:var(--card-border-hover)!important;
+  box-shadow:var(--card-shadow-hover)!important}
+.sth-root .wiki-card-btn:active{transform:translateY(0)!important}
+.sth-root .wiki-card-box>div:nth-child(2),
+.sth-root .wiki-card-box>div:nth-child(2) *{position:relative;z-index:2}
+.sth-root .wiki-card-box>div:nth-child(2) a{color:var(--accent)!important}
+.sth-root .wiki-card-box>div:nth-child(2) a:hover{color:var(--accent2)!important}
+.sth-root .wiki-card-box img{border-radius:8px}
+.sth-root .wiki-card-box ul{padding-left:18px}
+.sth-root .wiki-card-box li{margin-bottom:4px}
+.sth-root .wiki-card-box small a{color:var(--tx3)!important}
+.sth-card-row{display:flex;flex-wrap:wrap;align-items:stretch;gap:clamp(12px,1.5vw,20px);width:100%;box-sizing:border-box;margin:0}
+.sth-sandbox .sth-card-row-single .sth-card-slot{flex:1 1 100%}
+.sth-sandbox .sth-card-row-single .sth-card-slot>.wiki-card-box{width:100%}
+.sth-sandbox .sth-combined-status-card{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.sth-sandbox .sth-combined-status-section{min-width:0}
+.sth-body>.sth-animate + .sth-animate{margin-top:var(--space-row)}
+.sth-card-slot{flex:1 1 240px;min-width:0;display:flex}
+.sth-card-slot>.wiki-card-box{width:100%}
+.sth-card-slot>.sth-info-card,
+.sth-card-slot>.sth-status-card{border-radius:var(--radius-card);padding:var(--space-card)}
+.sth-info-card.sth-time-card{display:flex;flex-direction:column;padding:var(--space-card);min-width:0;border-radius:var(--radius-card)}
+.sth-card-badge{display:inline-block;align-self:flex-start;flex-shrink:0;max-width:100%;padding:7px 10px;border-radius:var(--radius-pill);background:var(--badge-bg);color:var(--badge-fg);font-size:1em;font-weight:700;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:12px}
+.sth-card-row-primary .sth-card-content{flex:0 1 auto;margin-top:0}
+.sth-card-row-primary .sth-info-card.sth-time-card{height:auto;min-height:0}
+.sth-badge-blue{--badge-bg:#dbeafe;--badge-fg:#1d4ed8}
+.sth-badge-amber{--badge-bg:#fef3c7;--badge-fg:#d97706}
+.sth-badge-violet{--badge-bg:#ede9fe;--badge-fg:#6d28d9}
+.sth-card-content{flex:1;margin-top:auto;min-width:0;width:100%;box-sizing:border-box;word-break:break-word;overflow-wrap:anywhere;overflow-x:hidden}
+.sth-content-flow{max-width:100%;word-break:break-word;overflow-wrap:anywhere;overflow-x:hidden}
+.sth-status-table{width:100%;border-collapse:collapse;margin:0;padding:0}
+.sth-status-table tr{line-height:2.2;border-bottom:1px solid rgba(148,163,184,.14)}
+.sth-status-table tr:last-child{border-bottom:0}
+.sth-status-table td{padding:0}
+.sth-status-table td:first-child{color:#5ea7ff;white-space:nowrap;text-align:left}
+.sth-status-table td+td{text-align:right;color:#fff;font-weight:700;font-variant-numeric:tabular-nums}
+/* TimeCard 标题徽标 */
+.sth-root .wiki-card-box>div[style*="background-color"]{
+  background:var(--accent-light)!important;
+  color:var(--accent)!important;
+  border:1px solid rgba(0,113,188,.15)!important;
+  border-radius:8px!important;
+  letter-spacing:.14em;
+  position:relative;z-index:2}
+
+/* ============ 7b. StatusCard（与信息卡统一视觉）============ */
+.sth-root .wiki-card-box.sth-status-card{
+  border-radius:var(--radius-card)!important;
+  padding:var(--space-card)!important}
+.sth-root .wiki-card-box.sth-status-card .sth-status-table td:first-child{color:var(--accent)!important;white-space:nowrap;text-align:left}
+.sth-root .wiki-card-box.sth-status-card .sth-status-table td+td{color:var(--tx)!important;font-weight:700;text-align:right;white-space:nowrap}
+
+.sth-root .wiki-card-box .launch-card{border-bottom-color:var(--hair)!important;
+  transition:background .2s ease;position:relative;z-index:2}
+.sth-root .wiki-card-box .launch-card:hover{background:var(--accent-light)!important}
+.sth-root .wiki-card-box .launch-card>span:first-of-type{color:var(--tx3)!important}
+.sth-root .wiki-card-box .launch-card>span:first-of-type a{color:inherit!important}
+.sth-root .wiki-card-box .launch-card>span:first-of-type a:hover{color:var(--accent)!important}
+.sth-root .wiki-card-box .launch-card>span:nth-of-type(2){color:var(--tx)!important}
+.sth-root .wiki-card-box .launch-card>span:nth-of-type(3){color:var(--tx2)!important}
+
+.sth-root .wiki-card-box>div:nth-child(2) td{color:var(--tx3)!important}
+.sth-root .wiki-card-box>div:nth-child(2) td a{color:var(--accent)!important}
+.sth-root .wiki-card-box>div:nth-child(2) td a:hover{color:var(--accent2)!important}
+.sth-root .wiki-card-box>div:nth-child(2) td+td{color:var(--tx)!important;font-weight:700}
+.sth-root .wiki-card-box>div:nth-child(2) tr+tr td{border-top:1px solid var(--hair)}
+
+@media (prefers-reduced-motion: reduce){
+  .sth-search,.sth-statbar,
+  .sth-animate{animation:none!important;opacity:1!important;transform:none!important}
+  .sth-root .wiki-card-btn,
+  .sth-root .wiki-card-box,
+  .sth-root a,.sth-root .wiki-card-btn,.sth-root .wiki-card-box{transition:none!important}
+}
+.sth-animate{opacity:0;transform:translateY(20px);
+  animation:sth-fade-in .7s cubic-bezier(.2,.6,.2,1) forwards}
+.sth-animate:nth-child(1){animation-delay:.05s}
+.sth-animate:nth-child(2){animation-delay:.15s}
+.sth-animate:nth-child(3){animation-delay:.25s}
+.sth-animate:nth-child(4){animation-delay:.35s}
+.sth-animate:nth-child(5){animation-delay:.45s}
+@keyframes sth-fade-in{to{opacity:1;transform:translateY(0)}}
+
+@media (hover:none), (pointer:coarse){
+  .sth-root .wiki-card-btn:hover,.sth-root .wiki-card-box:hover{transform:none!important}
+}
+
+@media (max-width:1100px){
+  .sth-nav-columns{grid-template-columns:1fr;gap:0}
+  .sth-hero{padding:15px}
+  .sth-body{padding:10px 16px 20px}
+}
+@media (max-width:575px){
+  .sth-sandbox .sth-combined-status-card{grid-template-columns:1fr}
+}
+@media (max-width:575px){
+  .sth-hero{padding:15px}
+  .sth-search{max-width:100%}
+  .sth-statbar{font-size:12px;gap:3px 8px;flex-direction:column;align-items:center}
+  .sth-body{padding:10px 12px 14px}
+  .sth-sec-title{font-size:17px;letter-spacing:.1em}
+  .sth-navgrid{grid-template-columns:repeat(6,minmax(0,1fr));gap:1px}
+  .sth-nav-card .wiki-card-btn{height:78px!important;min-height:78px!important;padding:0!important}
+  .sth-nav-card-media{font-size:1em;margin-bottom:3px}
+  .sth-nav-card-media img{width:clamp(24px,7vw,36px)!important;max-width:100%!important;height:auto!important;max-height:34px;object-fit:contain}
+  .sth-nav-card-label{font-size:clamp(10px,2.8vw,13px);line-height:1.1;letter-spacing:-.03em}
+  .sth-root .wiki-card-box .launch-card{grid-template-columns:6px 42px minmax(0,1fr)!important;gap:4px}
+  .sth-root .wiki-card-box .launch-card>span:nth-of-type(3){display:none}
+}
+@media (max-width:400px){
+  .sth-navgrid{grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+  .sth-nav-card .wiki-card-btn{height:64px!important;min-height:64px!important;padding:0!important}
+  .sth-nav-card-media img{width:28px!important;max-height:28px}
+  .sth-nav-card-label{font-size:10px}
+}
+</style>
